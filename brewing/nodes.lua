@@ -3,7 +3,7 @@
 -- It is distributed WITHOUT ANY WARRANTY
 -- See LICENSE.txt for more details
 
-local S = core.get_translator("s_brewing")
+local S = core.get_translator("potions_brewing")
 
 local api = s_potions
 local brewing = s_brewing
@@ -43,8 +43,8 @@ local alchemy_stand_def = {
 		local pos1 = vector.add(pos, brewing.boost_search_radius)
 		local pos2 = vector.subtract(pos, brewing.boost_search_radius)
 		
-		local boost_count = #core.find_nodes_in_area(pos1, pos2, {"s_brewing:boost"})
-		local table_count = #core.find_nodes_in_area(pos1, pos2, {"s_brewing:stand"})
+		local boost_count = #core.find_nodes_in_area(pos1, pos2, {"potions_brewing:boost"})
+		local table_count = #core.find_nodes_in_area(pos1, pos2, {"potions_brewing:stand"})
 		
 		meta:set_int("brew_time_left", brewing.brew_time)
 		meta:set_int("boost_count", boost_count)
@@ -83,7 +83,7 @@ local alchemy_stand_def = {
 				
 				local player = core.get_player_by_name(player_name)
 				
-				player:get_inventory():add_item("main", "s_brewing:stand")
+				player:get_inventory():add_item("main", "potions_brewing:stand")
 			end
 		end
 		
@@ -204,14 +204,14 @@ local alchemy_boost_def = {
 apply_alchemy_furniture_node_template(alchemy_stand_def, "s_brewing_stand.png")
 apply_alchemy_furniture_node_template(alchemy_boost_def, "s_brewing_boost.png")
 
-core.register_node("s_brewing:stand", alchemy_stand_def)
-core.register_node("s_brewing:boost", alchemy_boost_def)
+core.register_node("potions_brewing:stand", alchemy_stand_def)
+core.register_node("potions_brewing:boost", alchemy_boost_def)
 
 if core.get_modpath("mobs_monster") then
 	
 	local oerkki_def = core.registered_entities["mobs_monster:oerkki"]
 	
-	table.insert(oerkki_def.replace_what, "s_brewing:stand")
+	table.insert(oerkki_def.replace_what, "potions_brewing:stand")
 	
 end
 
@@ -219,6 +219,6 @@ if core.get_modpath("s_mobs_default") then
 	
 	local oerkki_def = core.registered_entities["s_mobs_default:oerkki"]
 	
-	table.insert(oerkki_def.replace_what, "s_brewing:stand")
+	table.insert(oerkki_def.replace_what, "potions_brewing:stand")
 	
 end
