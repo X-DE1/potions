@@ -1,5 +1,5 @@
 
-Potions
+Potions Modpack
 ---------------
 
 This modpack adds a simple potion brewing system for Minetest Game, balanced for and tested in v7 world generation.
