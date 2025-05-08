@@ -137,7 +137,8 @@ register_potion({
 	background = "default_gold_block.png",
 	ingredient = "default:gold_ingot",
 	effect = function(user) api.set_physics_factors(user, "jump", {jump=2}) end,
-	effect_end = function(effect, user) api.reset_physics_factors(user, "jump", {"jump"}) end
+	effect_end = function(effect, user) api.reset_physics_factors(user, "jump", {"jump"}) end,
+	repeat_interval = 0.2
 	
 })
 
