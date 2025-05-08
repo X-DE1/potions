@@ -5,7 +5,7 @@
 
 core.register_craft({
 
-	output = "s_brewing:stand",
+	output = "potions_brewing:stand",
 	recipe = {
 		{"vessels:glass_bottle", "vessels:glass_bottle", "vessels:glass_bottle"},
 		{"vessels:glass_bottle", "vessels:glass_bottle", "vessels:glass_bottle"},
@@ -15,7 +15,7 @@ core.register_craft({
 
 core.register_craft({
 
-	output = "s_brewing:boost",
+	output = "potions_brewing:boost",
 	recipe = {
 		{"vessels:glass_bottle", "vessels:glass_bottle", "vessels:glass_bottle"},
 		{"vessels:glass_bottle", "vessels:glass_bottle", "vessels:glass_bottle"},
