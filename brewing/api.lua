@@ -42,7 +42,7 @@ function s_brewing.add_to_value_in_nearby_stands(pos, value_name, value_add)
 	
 	local pos1 = vector.add(pos, brewing.boost_search_radius)
 	local pos2 = vector.subtract(pos, brewing.boost_search_radius)
-	local list = core.find_nodes_in_area(pos1, pos2, {"s_brewing:stand"})
+	local list = core.find_nodes_in_area(pos1, pos2, {"potions_brewing:stand"})
 	
 	for index, pos3 in next, list do
 	
