@@ -3,7 +3,7 @@
 -- It is distributed WITHOUT ANY WARRANTY
 -- See LICENSE.txt for more details
 
-local S = core.get_translator("s_brewing")
+local S = core.get_translator("potions_brewing")
 
 local S_vessels = core.get_translator("vessels")
 
@@ -13,7 +13,7 @@ local function vessels_shelf_update_alchemy_stands(pos)
 	local above = vector.new(pos.x, pos.y+1, pos.z)
 	local node = core.get_node(above)
 	
-	if node.name == "s_brewing:stand" then
+	if node.name == "potions_brewing:stand" then
 		s_brewing.alchemy_stand_update(above)
 	end
 end
