@@ -3,7 +3,7 @@
 -- It is distributed WITHOUT ANY WARRANTY
 -- See LICENSE.txt for more details
 
-local S = core.get_translator("s_brewing")
+local S = core.get_translator("potions_brewing")
 
 local brewing = s_brewing
 
