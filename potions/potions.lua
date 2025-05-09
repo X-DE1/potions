@@ -3,13 +3,13 @@
 -- It is distributed WITHOUT ANY WARRANTY
 -- See LICENSE.txt for more details
 
-local S = core.get_translator("s_potions_default")
+local S = core.get_translator("potions_default")
 
 local api = s_potions
 
 api.register_potion({
 	
-	name = "s_potions_default:stock",
+	name = "potions_default:stock",
 	desc = S("Potion Stock"),
 	background = "default_tin_block.png",
 	ingredient = "default:tin_ingot",
@@ -20,10 +20,10 @@ api.register_potion({
 
 local function register_potion(def)
 	
-	def.name = "s_potions_default:" .. def.name
+	def.name = "potions_default:" .. def.name
 	
-	if def.vial then def.vial = "s_potions_default:" .. def.vial
-	else def.vial = "s_potions_default:stock" end
+	if def.vial then def.vial = "potions_default:" .. def.vial
+	else def.vial = "potions_default:stock" end
 	
 	api.register_potion(def)
 	
