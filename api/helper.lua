@@ -64,7 +64,7 @@ end
 
 function s_potions.set_physics_factors(obj, name, physics)
 	
-	local id = "s_potions:" .. name
+	local id = "potions_api:" .. name
 	
 	for attribute, value in next, physics do
 		playerphysics.add_physics_factor(obj, attribute, id, value)
@@ -73,7 +73,7 @@ end
 
 function s_potions.reset_physics_factors(obj, name, physics)
 	
-	local id = "s_potions:" .. name
+	local id = "potions_api:" .. name
 	
 	for index, attribute in next, physics do
 		playerphysics.remove_physics_factor(obj, attribute, id)
@@ -85,7 +85,7 @@ function s_potions.speed_effect(user, name, ground_speed, liquid_speed, air_spee
 	ground_speed = ground_speed or 1
 	liquid_speed = liquid_speed or 1
 	
-	local effect_name = "s_potions:" .. name
+	local effect_name = "potions_api:" .. name
 	
 	local speed = playerphysics.get_physics_factor(user, "speed", effect_name) or math.min(ground_speed, liquid_speed)
 	local acceleration = playerphysics.get_physics_factor(user, "acceleration_default", effect_name) or 1/speed
