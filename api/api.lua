@@ -8,7 +8,7 @@ local vessels_enabled = (core.get_modpath("vessels") ~= nil)
 local function remove_particle_spawner_from_player(player)
 	
 	local meta = player:get_meta()
-	local particle_spawner = meta:get_int("s_potions:particle_spawner")
+	local particle_spawner = meta:get_int("potions_api:particle_spawner")
 	if particle_spawner then core.delete_particlespawner(particle_spawner) end
 end
 
@@ -55,7 +55,7 @@ function s_potions.add_particle_spawner(particle_background, duration, object, p
 		remove_particle_spawner_from_player(object)
 		
 		local meta = object:get_meta()
-		meta:set_int("s_potions:particle_spawner", particle_spawner)
+		meta:set_int("potions_api:particle_spawner", particle_spawner)
 		
 	end
 	
