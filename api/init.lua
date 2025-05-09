@@ -3,7 +3,7 @@
 -- It is distributed WITHOUT ANY WARRANTY
 -- See LICENSE.txt for more details
  
-local path = core.get_modpath("s_potions")
+local path = core.get_modpath("potions_api")
 
 s_potions = {
 	
