@@ -3,6 +3,6 @@
 -- It is distributed WITHOUT ANY WARRANTY
 -- See LICENSE.txt for more details
  
-local path = core.get_modpath("s_potions_default")
+local path = core.get_modpath("potions_default")
 
 dofile(path .. "/potions.lua")
