@@ -3,6 +3,7 @@ Code
 ----
 
 Copyright (C) 2024 Stakbox <stakbox@tutamail.com>
+Copyright (C) 2025 X-DE
 GNU General Public License, version 3.0 or later
 
 This program is free software: you can redistribute it and/or modify it under the terms
